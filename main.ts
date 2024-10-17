@@ -1,10 +1,11 @@
 // Copyright (c) 2020 MTHS All rights reserved
 // Created by: Gavin Gallant
-// Created on: Sep 2024
+// Created on: oct 2024
 // This program uses the RobotBit's Neopixels
 
 // Variables
 let neopixelStrip: neopixel.Strip = null;
+let lightLevel = input.lightLevel()
 
 // Cleanup
 basic.clearScreen();
@@ -51,4 +52,5 @@ input.onButtonPressed(Button.A, () => {
     neopixelStrip.setPixelColor(2, neopixel.colors(NeoPixelColors.Black));
     neopixelStrip.setPixelColor(3, neopixel.colors(NeoPixelColors.Black));
     neopixelStrip.show();
+    basic.showIcon(IconNames.Happy);
 });
